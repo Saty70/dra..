@@ -177,3 +177,38 @@ function myFunction() {
     saveDrawing()
   }
 setInterval(myFunction, 1000);
+
+
+isDrawing = false;
+
+// Add event listeners for mouse and touch events
+canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    e.preventDefault(); // Prevent default mouse event behavior
+});
+
+canvas.addEventListener('touchstart', (e) => {
+    isDrawing = true;
+    e.preventDefault(); // Prevent default touch event behavior
+});
+
+// Stop drawing when the mouse or touch is released
+document.addEventListener('mouseup', () => {
+    isDrawing = false;
+});
+
+document.addEventListener('touchend', () => {
+    isDrawing = false;
+});
+
+// Add an event listener for drawing on the canvas
+canvas.addEventListener('mousemove', (e) => {
+    if (!isDrawing) return;
+    // Your drawing code here...
+});
+
+canvas.addEventListener('touchmove', (e) => {
+    if (!isDrawing) return;
+    // Your drawing code here...
+    e.preventDefault(); // Prevent default touch event behavior
+});
