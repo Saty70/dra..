@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draw..</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="labl"><h1>Dra...</h1></div>
+    <div class="wrkspc">
+        <div class="ctrls">
+            <div class="lctrls">
+                <button id="drawButton">Draw</button>
+            <button id="eraseButton"><label for="eraserSizeRange">Eraser Size:</label>
+                <input type="range" id="eraserSizeRange" min="1" max="50" value="20">
+            </button>
+            <button id="clearButton">Clear</button>
+            </div>
+            <div class="rctrls">
+                <button id="saveButton">Save Drawing</button>
+            <button id="downloadButton">Download PNG</button>
+            </div>
+        </div>
+    
+        <div class="canva">
+            <canvas id="drawingCanvas" class="drawingCanvas" width="800" height="400"></canvas>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
